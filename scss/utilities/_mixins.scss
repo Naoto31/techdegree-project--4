@@ -1,0 +1,18 @@
+// mixins
+
+@mixin basic-display {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+
+@mixin img-margin-width {
+    margin-top: 10px;
+    max-width: 100%;
+}
+
+@mixin media-query {
+  @media (min-width: $brk-point) { @content; };
+
+}

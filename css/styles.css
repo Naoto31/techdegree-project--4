@@ -449,29 +449,73 @@ a {
   border-radius: 5px;
 }
 
-/* line 17, ../../../../../Users/naotosai/Desktop/Treehouse/GitHub/techdegree-project-4/scss/components/_buttons.scss */
+@media (min-width: 768px) {
+  /* line 5, ../../../../../Users/naotosai/Desktop/Treehouse/GitHub/techdegree-project-4/scss/components/_buttons.scss */
+  .btn {
+    padding: 10px 30px;
+  }
+}
+
+@media (min-width: 768px) {
+  /* line 18, ../../../../../Users/naotosai/Desktop/Treehouse/GitHub/techdegree-project-4/scss/components/_buttons.scss */
+  .btn + .btn {
+    margin-left: 10px;
+  }
+}
+
+/* line 27, ../../../../../Users/naotosai/Desktop/Treehouse/GitHub/techdegree-project-4/scss/components/_buttons.scss */
 .default {
   background-color: #51ddfc;
 }
 
-/* line 21, ../../../../../Users/naotosai/Desktop/Treehouse/GitHub/techdegree-project-4/scss/components/_buttons.scss */
+/* line 31, ../../../../../Users/naotosai/Desktop/Treehouse/GitHub/techdegree-project-4/scss/components/_buttons.scss */
+.default:hover {
+  background-color: #9cecfd;
+  transition: background-color .5s ease-in;
+}
+
+/* line 27, ../../../../../Users/naotosai/Desktop/Treehouse/GitHub/techdegree-project-4/scss/components/_buttons.scss */
 .error {
   background-color: #e4757a;
 }
 
-/* line 25, ../../../../../Users/naotosai/Desktop/Treehouse/GitHub/techdegree-project-4/scss/components/_buttons.scss */
+/* line 31, ../../../../../Users/naotosai/Desktop/Treehouse/GitHub/techdegree-project-4/scss/components/_buttons.scss */
+.error:hover {
+  background-color: #f1b5b8;
+  transition: background-color .5s ease-in;
+}
+
+/* line 27, ../../../../../Users/naotosai/Desktop/Treehouse/GitHub/techdegree-project-4/scss/components/_buttons.scss */
 .info {
   background-color: #927bc1;
 }
 
-/* line 29, ../../../../../Users/naotosai/Desktop/Treehouse/GitHub/techdegree-project-4/scss/components/_buttons.scss */
+/* line 31, ../../../../../Users/naotosai/Desktop/Treehouse/GitHub/techdegree-project-4/scss/components/_buttons.scss */
+.info:hover {
+  background-color: #bdafd9;
+  transition: background-color .5s ease-in;
+}
+
+/* line 27, ../../../../../Users/naotosai/Desktop/Treehouse/GitHub/techdegree-project-4/scss/components/_buttons.scss */
 .success {
   background-color: #63cc82;
 }
 
-/* line 33, ../../../../../Users/naotosai/Desktop/Treehouse/GitHub/techdegree-project-4/scss/components/_buttons.scss */
+/* line 31, ../../../../../Users/naotosai/Desktop/Treehouse/GitHub/techdegree-project-4/scss/components/_buttons.scss */
+.success:hover {
+  background-color: #9ddfb0;
+  transition: background-color .5s ease-in;
+}
+
+/* line 27, ../../../../../Users/naotosai/Desktop/Treehouse/GitHub/techdegree-project-4/scss/components/_buttons.scss */
 .warning {
   background-color: #fd7856;
+}
+
+/* line 31, ../../../../../Users/naotosai/Desktop/Treehouse/GitHub/techdegree-project-4/scss/components/_buttons.scss */
+.warning:hover {
+  background-color: #feb4a2;
+  transition: background-color .5s ease-in;
 }
 
 /* ============================================= */
@@ -513,17 +557,33 @@ a {
   flex-direction: column;
 }
 
-/* line 11, ../../../../../Users/naotosai/Desktop/Treehouse/GitHub/techdegree-project-4/scss/components/_navigation.scss */
+@media (min-width: 768px) {
+  /* line 5, ../../../../../Users/naotosai/Desktop/Treehouse/GitHub/techdegree-project-4/scss/components/_navigation.scss */
+  .nav {
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+  }
+}
+
+/* line 18, ../../../../../Users/naotosai/Desktop/Treehouse/GitHub/techdegree-project-4/scss/components/_navigation.scss */
 .nav-link {
   text-align: center;
   border-radius: 5px;
   padding: 10px 0;
   display: block;
   width: 100%;
-  transition: background-color .2s ease-in-out,  color .2s ease-in-out;
+  transition: background-color .2s ease-in-out, color .2s ease-in-out;
 }
 
-/* line 22, ../../../../../Users/naotosai/Desktop/Treehouse/GitHub/techdegree-project-4/scss/components/_navigation.scss */
+@media (min-width: 768px) {
+  /* line 18, ../../../../../Users/naotosai/Desktop/Treehouse/GitHub/techdegree-project-4/scss/components/_navigation.scss */
+  .nav-link {
+    flex-basis: 100px;
+  }
+}
+
+/* line 35, ../../../../../Users/naotosai/Desktop/Treehouse/GitHub/techdegree-project-4/scss/components/_navigation.scss */
 .nav-link:hover {
   color: #fff;
   background-color: #58e1c1;
@@ -542,7 +602,7 @@ a {
   max-height: 100%;
 }
 
-/* line 15, ../../../../../Users/naotosai/Desktop/Treehouse/GitHub/techdegree-project-4/scss/components/_images.scss */
+/* line 12, ../../../../../Users/naotosai/Desktop/Treehouse/GitHub/techdegree-project-4/scss/components/_images.scss */
 .img-frame {
   display: block;
   margin-left: auto;
@@ -553,11 +613,19 @@ a {
   border: 1px solid #ccc;
 }
 
-/* line 25, ../../../../../Users/naotosai/Desktop/Treehouse/GitHub/techdegree-project-4/scss/components/_images.scss */
+/* line 19, ../../../../../Users/naotosai/Desktop/Treehouse/GitHub/techdegree-project-4/scss/components/_images.scss */
 .img-logo {
   display: block;
   margin-left: auto;
   margin-right: auto;
+}
+
+@media (min-width: 768px) {
+  /* line 29, ../../../../../Users/naotosai/Desktop/Treehouse/GitHub/techdegree-project-4/scss/components/_images.scss */
+  .logo {
+    margin-left: initial;
+    margin-right: initial;
+  }
 }
 
 /* ============================================= */
@@ -568,14 +636,31 @@ a {
   padding: 0 10px;
 }
 
-/* line 9, ../../../../../Users/naotosai/Desktop/Treehouse/GitHub/techdegree-project-4/scss/components/_grid.scss */
+@media (min-width: 768px) {
+  /* line 5, ../../../../../Users/naotosai/Desktop/Treehouse/GitHub/techdegree-project-4/scss/components/_grid.scss */
+  .container {
+    max-width: 1400px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* line 14, ../../../../../Users/naotosai/Desktop/Treehouse/GitHub/techdegree-project-4/scss/components/_grid.scss */
 .row {
   display: flex;
   flex-direction: column;
   padding: 1em 10px;
 }
 
-/* line 15, ../../../../../Users/naotosai/Desktop/Treehouse/GitHub/techdegree-project-4/scss/components/_grid.scss */
+@media (min-width: 768px) {
+  /* line 14, ../../../../../Users/naotosai/Desktop/Treehouse/GitHub/techdegree-project-4/scss/components/_grid.scss */
+  .row {
+    flex-direction: row;
+  }
+}
+
+/* line 25, ../../../../../Users/naotosai/Desktop/Treehouse/GitHub/techdegree-project-4/scss/components/_grid.scss */
 [class^=col] {
   margin-top: 10px;
   flex-basis: 100%;
@@ -584,174 +669,183 @@ a {
   border-radius: 5px;
 }
 
-/* line 24, ../../../../../Users/naotosai/Desktop/Treehouse/GitHub/techdegree-project-4/scss/components/_grid.scss */
-.theme.col-1 {
-  background-color: #ffa047;
-}
-
-/* line 24, ../../../../../Users/naotosai/Desktop/Treehouse/GitHub/techdegree-project-4/scss/components/_grid.scss */
-.theme.col-2 {
-  background-color: #ffde47;
-}
-
-/* line 24, ../../../../../Users/naotosai/Desktop/Treehouse/GitHub/techdegree-project-4/scss/components/_grid.scss */
-.theme.col-3 {
-  background-color: #e3ff47;
-}
-
-/* line 24, ../../../../../Users/naotosai/Desktop/Treehouse/GitHub/techdegree-project-4/scss/components/_grid.scss */
-.theme.col-4 {
-  background-color: #a6ff47;
-}
-
-/* line 24, ../../../../../Users/naotosai/Desktop/Treehouse/GitHub/techdegree-project-4/scss/components/_grid.scss */
-.theme.col-5 {
-  background-color: #68ff47;
-}
-
-/* line 24, ../../../../../Users/naotosai/Desktop/Treehouse/GitHub/techdegree-project-4/scss/components/_grid.scss */
-.theme.col-6 {
-  background-color: #47ff63;
-}
-
-/* line 24, ../../../../../Users/naotosai/Desktop/Treehouse/GitHub/techdegree-project-4/scss/components/_grid.scss */
-.theme.col-7 {
-  background-color: #47ffa0;
-}
-
-/* line 24, ../../../../../Users/naotosai/Desktop/Treehouse/GitHub/techdegree-project-4/scss/components/_grid.scss */
-.theme.col-8 {
-  background-color: #47ffde;
-}
-
-/* line 24, ../../../../../Users/naotosai/Desktop/Treehouse/GitHub/techdegree-project-4/scss/components/_grid.scss */
-.theme.col-9 {
-  background-color: #47e3ff;
-}
-
-/* line 24, ../../../../../Users/naotosai/Desktop/Treehouse/GitHub/techdegree-project-4/scss/components/_grid.scss */
-.theme.col-10 {
-  background-color: #47a6ff;
-}
-
-/* line 24, ../../../../../Users/naotosai/Desktop/Treehouse/GitHub/techdegree-project-4/scss/components/_grid.scss */
-.theme.col-11 {
-  background-color: #4768ff;
-}
-
-/* line 24, ../../../../../Users/naotosai/Desktop/Treehouse/GitHub/techdegree-project-4/scss/components/_grid.scss */
-.theme.col-12 {
-  background-color: #6347ff;
-}
-
-/* line 30, ../../../../../Users/naotosai/Desktop/Treehouse/GitHub/techdegree-project-4/scss/components/_grid.scss */
-.card {
-  flex-basis: 100%;
-}
-
-/* ============================================= */
-/*              Media Queries                    */
-/* ============================================= */
 @media (min-width: 768px) {
-  /* line 7, ../../../../../Users/naotosai/Desktop/Treehouse/GitHub/techdegree-project-4/scss/components/_media-queries.scss */
-  .container {
-    max-width: 1400px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  /* line 14, ../../../../../Users/naotosai/Desktop/Treehouse/GitHub/techdegree-project-4/scss/components/_media-queries.scss */
-  .centered {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  /* line 20, ../../../../../Users/naotosai/Desktop/Treehouse/GitHub/techdegree-project-4/scss/components/_media-queries.scss */
-  .row {
-    flex-direction: row;
-  }
-  /* line 24, ../../../../../Users/naotosai/Desktop/Treehouse/GitHub/techdegree-project-4/scss/components/_media-queries.scss */
+  /* line 25, ../../../../../Users/naotosai/Desktop/Treehouse/GitHub/techdegree-project-4/scss/components/_grid.scss */
   [class^=col] {
     display: flex;
     justify-content: center;
     margin-top: 0;
     align-items: center;
   }
-  /* line 31, ../../../../../Users/naotosai/Desktop/Treehouse/GitHub/techdegree-project-4/scss/components/_media-queries.scss */
+}
+
+/* line 42, ../../../../../Users/naotosai/Desktop/Treehouse/GitHub/techdegree-project-4/scss/components/_grid.scss */
+.theme.col-1 {
+  background-color: #927bc1;
+}
+
+/* line 42, ../../../../../Users/naotosai/Desktop/Treehouse/GitHub/techdegree-project-4/scss/components/_grid.scss */
+.theme.col-2 {
+  background-color: #fd7856;
+}
+
+/* line 42, ../../../../../Users/naotosai/Desktop/Treehouse/GitHub/techdegree-project-4/scss/components/_grid.scss */
+.theme.col-3 {
+  background-color: #deb2ee;
+}
+
+/* line 42, ../../../../../Users/naotosai/Desktop/Treehouse/GitHub/techdegree-project-4/scss/components/_grid.scss */
+.theme.col-4 {
+  background-color: #7ee6fd;
+}
+
+/* line 42, ../../../../../Users/naotosai/Desktop/Treehouse/GitHub/techdegree-project-4/scss/components/_grid.scss */
+.theme.col-5 {
+  background-color: #88d9a0;
+}
+
+/* line 42, ../../../../../Users/naotosai/Desktop/Treehouse/GitHub/techdegree-project-4/scss/components/_grid.scss */
+.theme.col-6 {
+  background-color: #4da2bb;
+}
+
+/* line 42, ../../../../../Users/naotosai/Desktop/Treehouse/GitHub/techdegree-project-4/scss/components/_grid.scss */
+.theme.col-7 {
+  background-color: #ec9fa3;
+}
+
+/* line 42, ../../../../../Users/naotosai/Desktop/Treehouse/GitHub/techdegree-project-4/scss/components/_grid.scss */
+.theme.col-8 {
+  background-color: #fd9f85;
+}
+
+/* line 42, ../../../../../Users/naotosai/Desktop/Treehouse/GitHub/techdegree-project-4/scss/components/_grid.scss */
+.theme.col-9 {
+  background-color: #e4757a;
+}
+
+/* line 42, ../../../../../Users/naotosai/Desktop/Treehouse/GitHub/techdegree-project-4/scss/components/_grid.scss */
+.theme.col-10 {
+  background-color: #63cc82;
+}
+
+/* line 42, ../../../../../Users/naotosai/Desktop/Treehouse/GitHub/techdegree-project-4/scss/components/_grid.scss */
+.theme.col-11 {
+  background-color: #51ddfc;
+}
+
+/* line 42, ../../../../../Users/naotosai/Desktop/Treehouse/GitHub/techdegree-project-4/scss/components/_grid.scss */
+.theme.col-12 {
+  background-color: #80e8d1;
+}
+
+/* line 47, ../../../../../Users/naotosai/Desktop/Treehouse/GitHub/techdegree-project-4/scss/components/_grid.scss */
+.card {
+  flex-basis: 100%;
+}
+
+@media (min-width: 768px) {
+  /* line 51, ../../../../../Users/naotosai/Desktop/Treehouse/GitHub/techdegree-project-4/scss/components/_grid.scss */
+  .centered {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (min-width: 768px) {
+  /* line 57, ../../../../../Users/naotosai/Desktop/Treehouse/GitHub/techdegree-project-4/scss/components/_grid.scss */
   [class^=col] + [class^=col] {
     margin-left: 10px;
   }
-  /* line 36, ../../../../../Users/naotosai/Desktop/Treehouse/GitHub/techdegree-project-4/scss/components/_media-queries.scss */
+}
+
+@media (min-width: 768px) {
+  /* line 65, ../../../../../Users/naotosai/Desktop/Treehouse/GitHub/techdegree-project-4/scss/components/_grid.scss */
   .col-1 {
     flex-basis: 8.33333%;
   }
-  /* line 36, ../../../../../Users/naotosai/Desktop/Treehouse/GitHub/techdegree-project-4/scss/components/_media-queries.scss */
+}
+
+@media (min-width: 768px) {
+  /* line 65, ../../../../../Users/naotosai/Desktop/Treehouse/GitHub/techdegree-project-4/scss/components/_grid.scss */
   .col-2 {
     flex-basis: 16.66667%;
   }
-  /* line 36, ../../../../../Users/naotosai/Desktop/Treehouse/GitHub/techdegree-project-4/scss/components/_media-queries.scss */
+}
+
+@media (min-width: 768px) {
+  /* line 65, ../../../../../Users/naotosai/Desktop/Treehouse/GitHub/techdegree-project-4/scss/components/_grid.scss */
   .col-3 {
     flex-basis: 25%;
   }
-  /* line 36, ../../../../../Users/naotosai/Desktop/Treehouse/GitHub/techdegree-project-4/scss/components/_media-queries.scss */
+}
+
+@media (min-width: 768px) {
+  /* line 65, ../../../../../Users/naotosai/Desktop/Treehouse/GitHub/techdegree-project-4/scss/components/_grid.scss */
   .col-4 {
     flex-basis: 33.33333%;
   }
-  /* line 36, ../../../../../Users/naotosai/Desktop/Treehouse/GitHub/techdegree-project-4/scss/components/_media-queries.scss */
+}
+
+@media (min-width: 768px) {
+  /* line 65, ../../../../../Users/naotosai/Desktop/Treehouse/GitHub/techdegree-project-4/scss/components/_grid.scss */
   .col-5 {
     flex-basis: 41.66667%;
   }
-  /* line 36, ../../../../../Users/naotosai/Desktop/Treehouse/GitHub/techdegree-project-4/scss/components/_media-queries.scss */
+}
+
+@media (min-width: 768px) {
+  /* line 65, ../../../../../Users/naotosai/Desktop/Treehouse/GitHub/techdegree-project-4/scss/components/_grid.scss */
   .col-6 {
     flex-basis: 50%;
   }
-  /* line 36, ../../../../../Users/naotosai/Desktop/Treehouse/GitHub/techdegree-project-4/scss/components/_media-queries.scss */
+}
+
+@media (min-width: 768px) {
+  /* line 65, ../../../../../Users/naotosai/Desktop/Treehouse/GitHub/techdegree-project-4/scss/components/_grid.scss */
   .col-7 {
     flex-basis: 58.33333%;
   }
-  /* line 36, ../../../../../Users/naotosai/Desktop/Treehouse/GitHub/techdegree-project-4/scss/components/_media-queries.scss */
+}
+
+@media (min-width: 768px) {
+  /* line 65, ../../../../../Users/naotosai/Desktop/Treehouse/GitHub/techdegree-project-4/scss/components/_grid.scss */
   .col-8 {
     flex-basis: 66.66667%;
   }
-  /* line 36, ../../../../../Users/naotosai/Desktop/Treehouse/GitHub/techdegree-project-4/scss/components/_media-queries.scss */
+}
+
+@media (min-width: 768px) {
+  /* line 65, ../../../../../Users/naotosai/Desktop/Treehouse/GitHub/techdegree-project-4/scss/components/_grid.scss */
   .col-9 {
     flex-basis: 75%;
   }
-  /* line 36, ../../../../../Users/naotosai/Desktop/Treehouse/GitHub/techdegree-project-4/scss/components/_media-queries.scss */
+}
+
+@media (min-width: 768px) {
+  /* line 65, ../../../../../Users/naotosai/Desktop/Treehouse/GitHub/techdegree-project-4/scss/components/_grid.scss */
   .col-10 {
     flex-basis: 83.33333%;
   }
-  /* line 36, ../../../../../Users/naotosai/Desktop/Treehouse/GitHub/techdegree-project-4/scss/components/_media-queries.scss */
+}
+
+@media (min-width: 768px) {
+  /* line 65, ../../../../../Users/naotosai/Desktop/Treehouse/GitHub/techdegree-project-4/scss/components/_grid.scss */
   .col-11 {
     flex-basis: 91.66667%;
   }
-  /* line 36, ../../../../../Users/naotosai/Desktop/Treehouse/GitHub/techdegree-project-4/scss/components/_media-queries.scss */
+}
+
+@media (min-width: 768px) {
+  /* line 65, ../../../../../Users/naotosai/Desktop/Treehouse/GitHub/techdegree-project-4/scss/components/_grid.scss */
   .col-12 {
     flex-basis: 100%;
   }
-  /* line 41, ../../../../../Users/naotosai/Desktop/Treehouse/GitHub/techdegree-project-4/scss/components/_media-queries.scss */
-  .nav {
-    flex-direction: row;
-    justify-content: flex-end;
-    align-items: center;
-  }
-  /* line 47, ../../../../../Users/naotosai/Desktop/Treehouse/GitHub/techdegree-project-4/scss/components/_media-queries.scss */
-  .nav-link {
-    flex-basis: 100px;
-  }
-  /* line 51, ../../../../../Users/naotosai/Desktop/Treehouse/GitHub/techdegree-project-4/scss/components/_media-queries.scss */
-  .btn {
-    padding: 10px 30px;
-  }
-  /* line 55, ../../../../../Users/naotosai/Desktop/Treehouse/GitHub/techdegree-project-4/scss/components/_media-queries.scss */
-  .btn + .btn {
-    margin-left: 10px;
-  }
-  /* line 59, ../../../../../Users/naotosai/Desktop/Treehouse/GitHub/techdegree-project-4/scss/components/_media-queries.scss */
-  .logo {
-    margin-left: initial;
-    margin-right: initial;
-  }
 }
+
+/* ============================================= */
+/*              Media Queries                    */
+/* ============================================= */
 
 /*# sourceMappingURL=styles.css.map */

@@ -3,33 +3,33 @@
 /* ============================================= */
 
 .btn {
-    margin-top: 15px;
-    width: 100%;
-    color: $white;
-    border: none;
-    padding: 10px 0;
-    text-transform: uppercase;
-    border-radius: 5px;
-  }
-  
+  margin-top: 15px;
+  width: 100%;
+  color: $white;
+  border: none;
+  padding: 10px 0;
+  text-transform: uppercase;
+  border-radius: 5px;
 
+  @include media-query {
+    padding: 10px 30px;
+  }
 
-  .default {
-    background-color: $button-default-color;
+  &+.btn {
+    @media (min-width: $brk-point) {
+      margin-left: 10px;
+    }
   }
-  
-  .error {
-    background-color: $button-error-color;
+}
+
+@each $name,
+$button-color in $button-colors {
+  .#{$name} {
+    background-color: $button-color;
   }
-  
-  .info {
-    background-color: $button-info-color;
+
+  &.#{$name}:hover {
+    background-color: lighten($button-color, 15%);
+    transition: background-color .5s ease-in;
   }
-  
-  .success {
-    background-color: $button-success-color;
-  }
-  
-  .warning {
-    background-color: $button-warning-color;
-  }
+}

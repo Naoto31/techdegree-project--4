@@ -3,30 +3,69 @@
 /* ============================================= */
 
 .container {
-    padding: 0 10px;
+  padding: 0 10px;
+
+  @include media-query  {
+    max-width: 1400px;
+    @include basic-display;
   }
-  
+}
+
 .row {
-    display: flex;
-    flex-direction: column;
-    padding: 1em 10px;
+  display: flex;
+  flex-direction: column;
+  padding: 1em 10px;
+
+  @include media-query {
+    flex-direction: row;
+
   }
-  
+}
+
 [class^=col] {
-    margin-top: 10px;
-    flex-basis: 100%;
-    min-height: 25px;
-    padding: 10px;
-    border-radius: 5px;
+  margin-top: 10px;
+  flex-basis: 100%;
+  min-height: 25px;
+  padding: 10px;
+  border-radius: 5px;
+
+  @include media-query {
+    display: flex;
+    justify-content: center;
+    margin-top: 0;
+    align-items: center;
   }
+}
 
-@for $i from 1 through 12 {
-    .theme.col-#{$i} {
-        background-color: adjust-hue(tomato, $i * 20);
-    }
-
+@each $number,
+$color in $grid-colors {
+  .theme.col-#{$number} {
+    background-color: #{$color};
+  }
 }
 
 .card {
-    flex-basis: 100%;
+  flex-basis: 100%;
+}
+
+.centered {
+  @include media-query  {
+    @include basic-display;
   }
+}
+
+[class^=col]+[class^=col] {
+  @include media-query  {
+    margin-left: 10px;
+  }
+}
+
+@for $i from 1 through 12 {
+  @include media-query {
+    .col-#{$i} {
+      flex-basis: ((100% / 12)* $i);
+    }
+  }
+
+
+}

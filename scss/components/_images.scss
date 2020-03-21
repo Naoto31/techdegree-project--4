@@ -2,30 +2,32 @@
 /*              Images                           */
 /* ============================================= */
 
-.img{
-    &-avatar {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 10px;
-    max-width: 100%; 
+.img {
+  &-avatar {
+    @include basic-display;
+    @include img-margin-width;
     max-height: 100%;
   }
-  
- &-frame {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 10px;
-    max-width: 100%;
+
+  &-frame {
+    @include basic-display;
+    @include img-margin-width;
     padding: 13px;
-    border: 1px solid #ccc;
-  }
-  
- &-logo {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+    border: 1px solid $light-grey;
   }
 
+  &-logo {
+    @include basic-display;
+
+  }
+
+}
+
+
+@include media-query  {
+
+  .logo {
+    margin-left: initial;
+    margin-right: initial;
+  }
 }
